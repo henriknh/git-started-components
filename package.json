@@ -1,0 +1,25 @@
+{
+  "name": "git-started-components",
+  "version": "1.0.0",
+  "description": "Shared components between projects",
+  "files": [
+    "src/**/*"
+  ],
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henriknh/git-started-components.git"
+  },
+  "author": "Henrik Nilsson Harnert",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/henriknh/git-started-components/issues"
+  },
+  "homepage": "https://github.com/henriknh/git-started-components#readme",
+  "dependencies": {
+    "@types/react": "^18.2.79"
+  }
+}
