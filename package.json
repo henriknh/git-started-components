@@ -19,7 +19,10 @@
     "url": "https://github.com/henriknh/git-started-components/issues"
   },
   "homepage": "https://github.com/henriknh/git-started-components#readme",
-  "dependencies": {
+  "devDependencies": {
     "@types/react": "^18.2.79"
+  },
+  "peerDependencies": {
+    "next": "latest"
   }
 }
