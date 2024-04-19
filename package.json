@@ -23,6 +23,8 @@
     "@types/react": "^18.2.79"
   },
   "peerDependencies": {
-    "next": "latest"
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
   }
 }
