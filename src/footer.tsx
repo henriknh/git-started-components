@@ -1,13 +1,12 @@
 import Link from "next/link";
-import { ReactElement } from "react";
 import profilePic from "../assets/HenrikNilssonHarnert_square_small.jpg";
 
-export interface Props {
+export interface FooterProps {
   title: string;
   logoUrl: string;
   links: { label: string; href: string }[];
 }
-export function Footer({ title, logoUrl, links }: Props) {
+export function Footer({ title, logoUrl, links }: FooterProps) {
   return (
     <>
       <div className="flex-1" />
@@ -31,7 +30,11 @@ export function Footer({ title, logoUrl, links }: Props) {
             <nav>
               <h6 className="footer-title">Links</h6>
               {links.map((link) => (
-                <Link href={link.href} className="link link-hover">
+                <Link
+                  key={link.label + link.href}
+                  href={link.href}
+                  className="link link-hover"
+                >
                   {link.label}
                 </Link>
               ))}
@@ -86,14 +89,22 @@ export function Footer({ title, logoUrl, links }: Props) {
             <div className="flex flex-col">
               <div>
                 Hey 👋 My name is{" "}
-                <Link href="https://henriknh.com" target="_blank">
+                <Link
+                  href="https://henriknh.com"
+                  target="_blank"
+                  className="link"
+                >
                   Henrik
                 </Link>{" "}
                 and I'm the creator of {title}
               </div>
               <div>
                 You can follow my development adventures on{" "}
-                <Link href="https://twitter.com/henriknh_" target="_blank">
+                <Link
+                  href="https://twitter.com/henriknh_"
+                  target="_blank"
+                  className="link"
+                >
                   Twitter
                 </Link>
               </div>
