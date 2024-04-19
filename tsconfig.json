@@ -8,5 +8,6 @@
     "skipLibCheck": true,
     "jsx": "preserve"
   },
+  "include": ["./src/index.d.ts"],
   "$schema": "https://json.schemastore.org/tsconfig"
 }
