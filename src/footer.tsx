@@ -1,54 +1,106 @@
 import Link from "next/link";
+import { ReactElement } from "react";
+import profilePic from "../assets/HenrikNilssonHarnert_square_small.jpg";
 
 export interface Props {
   title: string;
+  logoUrl: string;
+  links: { label: string; href: string }[];
 }
-export function Footer({ title }: Props) {
+export function Footer({ title, logoUrl, links }: Props) {
   return (
-    <footer className="footer p-10 bg-base-200 text-base-content">
-      <aside>
-        <Link href="/#">
-          <svg
-            width="50"
-            height="50"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-            fillRule="evenodd"
-            clipRule="evenodd"
-            className="fill-current"
-          >
-            <path d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path>
-          </svg>
-        </Link>
-        <p>
-          <Link href="/#">{title}</Link>
-          <br />
-          <span>
-            Copyright © {new Date().getFullYear()} - All rights reserved
-          </span>
-        </p>
-      </aside>
-      <nav>
-        <h6 className="footer-title">Services</h6>
-        <a className="link link-hover">Branding</a>
-        <a className="link link-hover">Design</a>
-        <a className="link link-hover">Marketing</a>
-        <a className="link link-hover">Advertisement</a>
-      </nav>
-      <nav>
-        <h6 className="footer-title">Company</h6>
-        <a className="link link-hover">About us</a>
-        <a className="link link-hover">Contact</a>
-        <a className="link link-hover">Jobs</a>
-        <a className="link link-hover">Press kit</a>
-      </nav>
-      <nav>
-        <h6 className="footer-title">Legal</h6>
-        <Link href="/tos">Terms of services</Link>
-        <a className="link link-hover">Terms of services</a>
-        <a className="link link-hover">Privacy policy</a>
-        <a className="link link-hover">Cookie policy</a>
-      </nav>
-    </footer>
+    <>
+      <div className="flex-1" />
+      <footer className="w-full flex flex-col items-center p-10 bg-base-200 text-base-content">
+        <div className="container flex flex-col gap-10">
+          <div className="footer">
+            <aside>
+              {logoUrl && (
+                <Link href="/#">
+                  <img src={logoUrl} className="h-16 m-0" />
+                </Link>
+              )}
+              <p>
+                <Link href="/#">{title}</Link>
+                <br />
+                <span>
+                  Copyright © {new Date().getFullYear()} - All rights reserved
+                </span>
+              </p>
+            </aside>
+            <nav>
+              <h6 className="footer-title">Links</h6>
+              {links.map((link) => (
+                <Link href={link.href} className="link link-hover">
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+            <nav>
+              <h6 className="footer-title">Legal</h6>
+              <Link href="/tos" className="link link-hover">
+                Terms of services
+              </Link>
+              <Link href="/privacy-policy" className="link link-hover">
+                Privacy policy
+              </Link>
+            </nav>
+            <nav>
+              <h6 className="footer-title">More</h6>
+              <Link
+                href="https://tasteoftrail.com"
+                target="_blank"
+                className="link link-hover"
+              >
+                Taste of Trail
+              </Link>
+              <Link
+                href="https://marketplace.visualstudio.com/items?itemName=henriknh.lfw-codes-for-bananas"
+                target="_blank"
+                className="link link-hover"
+              >
+                LFW: Codes for bananas
+              </Link>
+              <Link
+                href="https://play.google.com/store/apps/details?id=com.henriknh.addzelines"
+                target="_blank"
+                className="link link-hover"
+              >
+                add ze lines (google play)
+              </Link>
+              <Link
+                href="https://henriknh.itch.io/add-ze-lines"
+                target="_blank"
+                className="link link-hover"
+              >
+                add ze lines (itch)
+              </Link>
+            </nav>
+          </div>
+
+          <div className="flex flex-col md:flex-row md:items-center gap-4">
+            <div className="h-12">
+              <img src={profilePic.src} className="h-full m-0 rounded-full" />
+            </div>
+
+            <div className="flex flex-col">
+              <div>
+                Hey 👋 My name is{" "}
+                <Link href="https://henriknh.com" target="_blank">
+                  Henrik
+                </Link>{" "}
+                and I'm the creator of {title}
+              </div>
+              <div>
+                You can follow my development adventures on{" "}
+                <Link href="https://twitter.com/henriknh_" target="_blank">
+                  Twitter
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </>
   );
 }
