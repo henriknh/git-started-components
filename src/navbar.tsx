@@ -75,7 +75,7 @@ export function Navbar({ title, logoUrl, links, cta }: NavbarProps) {
             aria-label="close sidebar"
             className="drawer-overlay"
           ></label>
-          <ul className="menu p-4 m-0 w-80 min-h-full bg-base-200">
+          <ul className="menu p-4 w-80 min-h-full bg-base-200">
             {/* Sidebar content here */}
             <li>
               <a>Sidebar Item 1</a>

@@ -16,7 +16,7 @@ export function Footer({ title, logoUrl, links }: FooterProps) {
             <aside>
               {logoUrl && (
                 <Link href="/#">
-                  <img src={logoUrl} className="h-16 m-0" />
+                  <img src={logoUrl} className="h-16" />
                 </Link>
               )}
               <p>
@@ -83,7 +83,7 @@ export function Footer({ title, logoUrl, links }: FooterProps) {
 
           <div className="flex flex-col md:flex-row md:items-center gap-4">
             <div className="h-12">
-              <img src={profilePic.src} className="h-full m-0 rounded-full" />
+              <img src={profilePic.src} className="h-full rounded-full" />
             </div>
 
             <div className="flex flex-col">
