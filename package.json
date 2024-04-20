@@ -3,10 +3,13 @@
   "version": "1.0.7",
   "description": "Shared components between projects",
   "files": [
-    "src/**/*"
+    "dist"
   ],
-  "main": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "rollup": "cross-env NODE_ENV=production rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,7 +23,18 @@
   },
   "homepage": "https://github.com/henriknh/git-started-components#readme",
   "devDependencies": {
-    "@types/react": "^18.2.79"
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-image": "^3.0.3",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/react": "^18.2.79",
+    "autoprefixer": "^9.8.8",
+    "cross-env": "^7.0.3",
+    "postcss": "^8.4.38",
+    "rollup": "^4.15.0",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
   },
   "peerDependencies": {
     "next": "latest",

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import profilePic from "../assets/HenrikNilssonHarnert_square_small.jpg";
+import profilePic from "../../assets/HenrikNilssonHarnert_square_small.jpg";
 
 export interface FooterProps {
   title: string;

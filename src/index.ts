@@ -1,2 +1,4 @@
-export * from "./footer";
-export * from "./navbar";
+import "./styles/tailwind.css";
+
+export * from "./components/footer";
+export * from "./components/navbar";

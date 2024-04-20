@@ -1,13 +1,21 @@
 {
   "compilerOptions": {
     "target": "es2016",
-    "module": "commonjs",
+    "module": "esnext",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "outDir": "dist",
     "skipLibCheck": true,
-    "jsx": "preserve"
+    "declaration": true,
+    "declarationDir": "types",
+    "sourceMap": true,
+    "typeRoots": ["node_modules/@types", "src/types"],
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "emitDeclarationOnly": true
   },
-  "include": ["./src/index.d.ts"],
+  "include": ["src"],
   "$schema": "https://json.schemastore.org/tsconfig"
 }
