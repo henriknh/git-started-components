@@ -3,8 +3,8 @@ on:
     branches: main
 
 concurrency:
-  group: ${{ github.head_ref }} + '2'
-  cancel-in-progress: false
+  group: ${{ github.head_ref }}
+  cancel-in-progress: true
 
 jobs:
   publish:
@@ -16,6 +16,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "20"
+
       - run: npm ci
       - run: npm run rollup
       - name: "Automated Version Bump"
