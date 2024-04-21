@@ -18,6 +18,7 @@ jobs:
           node-version: "20"
       - run: npm ci
       - run: npm ci
+      - run: npm ci
       - run: npm run rollup
       - name: "Automated Version Bump"
         uses: "phips28/gh-action-bump-version@master"
