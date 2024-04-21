@@ -14,11 +14,7 @@
     "jsx": "react-jsx",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "emitDeclarationOnly": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/components/*": ["src/components/*"]
-    }
+    "emitDeclarationOnly": true
   },
   "include": ["src"],
   "$schema": "https://json.schemastore.org/tsconfig"
