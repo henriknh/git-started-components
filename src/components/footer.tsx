@@ -23,7 +23,7 @@ export function Footer({ title, description, logoUrl, links }: FooterProps) {
               <p>
                 <Link href="/#">{title}</Link>
                 <br />
-                <div>{description}</div>
+                <span>{description}</span>
                 <br />
                 <span>
                   Copyright © {new Date().getFullYear()} - All rights reserved
