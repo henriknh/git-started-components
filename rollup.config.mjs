@@ -45,33 +45,4 @@ export default [
     external: [/\.(sass|scss|css)$/] /* ignore style files */,
     plugins: [dts()],
   },
-  // {
-  //   input: "dist/esm/types/index.d.ts",
-  //   output: [{ file: "dist/index.d.ts", format: "esm" }],
-  //   plugins: [dts()],
-  // },
-  // {
-  //   input: "src/index.ts",
-  //   output: {
-  // file: "./output.js",
-  // format: "esm",
-  // },
-  //   plugins: [
-  //     resolve(),
-  //     commonjs(),
-  //     image(),
-  //     typescript({ tsconfig: "./tsconfig.json" }),
-  //     postcss({
-  //       config: {
-  //         path: "./postcss.config.js",
-  //       },
-  //       extensions: [".css"],
-  //       minimize: true,
-  //       inject: {
-  //         insertAt: "top",
-  //       },
-  //     }),
-  //   ],
-  //   external: ["react", "react-dom"],
-  // },
 ];
