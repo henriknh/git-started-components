@@ -3,10 +3,11 @@ import profilePic from "../../assets/HenrikNilssonHarnert_square_small.jpg";
 
 export interface FooterProps {
   title: string;
+  description: string;
   logoUrl: string;
   links: { label: string; href: string }[];
 }
-export function Footer({ title, logoUrl, links }: FooterProps) {
+export function Footer({ title, description, logoUrl, links }: FooterProps) {
   return (
     <>
       <div className="flex-1" />
@@ -21,6 +22,8 @@ export function Footer({ title, logoUrl, links }: FooterProps) {
               )}
               <p>
                 <Link href="/#">{title}</Link>
+                <br />
+                <div>{description}</div>
                 <br />
                 <span>
                   Copyright © {new Date().getFullYear()} - All rights reserved
