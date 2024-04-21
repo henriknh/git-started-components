@@ -3,7 +3,7 @@ on:
     branches: main
 
 concurrency:
-  group: ${{ github.head_ref }} + '1'
+  group: ${{ github.head_ref }} + '2'
   cancel-in-progress: false
 
 jobs:
