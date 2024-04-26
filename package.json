@@ -1,6 +1,6 @@
 {
   "name": "git-started-components",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "Shared components between projects",
   "files": [
     "dist"
