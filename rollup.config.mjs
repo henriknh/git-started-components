@@ -8,6 +8,9 @@ import packageJson from "./package.json" assert { type: "json" };
 
 export default [
   {
+    watch: {
+      buildDelay: 500,
+    },
     input: "src/index.ts",
     output: [
       {
